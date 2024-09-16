@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -8,7 +11,10 @@ function App() {
     if ( count < 10 ){
       setCount (count + 1)
     }else{
-      alert('Limite de compra por cpf é: 10')
+      toast('Limite de compra por cpf é: 10', {
+        position: "top-left",
+        className: 'foo-bar'
+      })
       return false
     }
   }
@@ -27,10 +33,10 @@ function App() {
     <div>
       <h2>{count}</h2>
       
-      <button onClick={ subtrair }> - </button>
-      <button onClick={ somar }> + </button>
+      <button onClick={ subtrair } style={{margin: 10, background: 'red', fontSize: 15}}> - </button>
+      <button onClick={ somar } > + </button>
 
-      </div>  
+    </div>  
       
     </>
   )
