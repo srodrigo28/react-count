@@ -28,17 +28,17 @@ function App() {
   }
 
   return (
-    <>
-    <h1>Adicionar e remover Produto</h1>
-    <div>
-      <h2>{count}</h2>
-      
-      <button onClick={ subtrair } style={{margin: 10, background: 'red', fontSize: 15}}> - </button>
-      <button onClick={ somar } > + </button>
+    <div className='container'>
+      <h1>Adicionar e remover Produto</h1>
+      <div className='content'>
+        <h2>{count}</h2>
 
-    </div>  
-      
-    </>
+        <div className="btns-group">
+          <button onClick={ subtrair } style={{margin: 10, fontSize: 15}}> - </button>
+          <button onClick={ somar }> + </button>
+        </div>
+      </div>  
+    </div>
   )
 }
 
